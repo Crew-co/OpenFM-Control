@@ -49,7 +49,7 @@ elseif num == "8" then
 end
 
 if num == "exit" then
-  os.exit()
+  dofile("FMC.lua")
  end
  
  until false
