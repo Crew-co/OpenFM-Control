@@ -1,55 +1,31 @@
 local component = require("component")
 fm = component.openfm_radio
 repeat
-print("Volume Control")
-io.write("tpye a # between 1-9 to set the volume")
-num = io.read()
-if num == "1" then
-  fm.setVol(num)
-
-os.execute("clear")
-
-elseif num == "2" then
-  fm.setVol(num)
-  
-  os.execute("clear")
-  
-elseif num == "3" then
-  fm.setVol(num)
-
-os.execute("clear")
-
-elseif num == "4" then
-  fm.setVol(num)
- 
- os.execute("clear")
- 
- elseif num == "5" then
-   fm.setVol(num)
-
-os.execute("clear")
-
-elseif num == "6" then
-  fm.setVol(num)
-  
-  os.execute("clear")
-  
-elseif num == "7" then
-  fm.setVol(num)
-
-os.execute("clear")
-
-elseif num == "8" then
-  fm.setVol(num)
- 
- os.execute("clear")
- 
- elseif num == "9" then
-   fm.setVol(num)
-end
-
-if num == "exit" then
-  dofile("FMC.lua")
- end
- 
- until false
+volume = io.read()
+  if volume == "vol" then
+    os.sleep(1)
+    io.write("Type a number 1-9 to set the volume: ")
+    num = io.read()
+  elseif volume == "1" then
+    fm.setVol(1)
+  elseif volume == "2" then
+    fm.setVol(2)
+  elseif volume == "3" then
+    fm.setVol(3)
+  elseif volume == "4" then
+    fm.setVol(4)
+  elseif volume == "5" then
+    fm.setVol(5)
+  elseif volume == "6" then
+    fm.setVol(6)
+  elseif volume == "7" then
+    fm.setVol(7)
+  elseif volume == "8" then
+    fm.setVol(8)
+  elseif volume == "9" then
+    fm.setVol(9)
+  end
+  if volume == "exit" then
+    dofile(FM.lua)
+  end
+until false
